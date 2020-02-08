@@ -11,21 +11,19 @@ import UIKit
 public protocol ViewControllerProtocol: Component {
     associatedtype U: ViewModel
     associatedtype T: View
-    var v: T? { get set }
+    var v: T? { get }
     var viewModel: U? { get set }
     func customizeAppearance()
     func setView(_ view: T?)
     func setNavigationController()
 }
 
-open class ViewController<U: ViewModel, T: View>: UIViewController, ViewControllerProtocol {
+open class ViewController<
+    U: ViewModel,
+    T: View
+>: UIViewController, ViewControllerProtocol {
     public var v: T? {
-        get {
-            return self.view as? T
-        }
-        set {
-            self.view = newValue
-        }
+        return self.view as? T
     }
     open var viewModel: U?
     
@@ -66,13 +64,12 @@ open class ViewController<U: ViewModel, T: View>: UIViewController, ViewControll
         super.viewWillAppear(animated)
         setNavigationController()
     }
-        
+    
     open func setView(_ view: T?) {
-        self.v = view
+        self.view = view
     }
     
     open func customizeAppearance() { }
     open func setNavigationController() { }
     open func setListeners() { }
 }
-

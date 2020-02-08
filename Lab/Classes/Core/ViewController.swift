@@ -14,7 +14,7 @@ public protocol ViewControllerProtocol: Component {
     var v: T? { get set }
     var viewModel: U? { get set }
     func customizeAppearance()
-    func setView(_ view: T)
+    func setView(_ view: T?)
     func setNavigationController()
 }
 
@@ -31,6 +31,8 @@ open class ViewController<U: ViewModel, T: View>: UIViewController, ViewControll
     
     public init(view: T?, viewModel: U?) {
         super.init(nibName: nil, bundle: nil)
+        self.viewModel = viewModel
+        setView(view)
         customInit()
     }
     
@@ -64,15 +66,12 @@ open class ViewController<U: ViewModel, T: View>: UIViewController, ViewControll
         super.viewWillAppear(animated)
         setNavigationController()
     }
-    
-    open func customizeAppearance() {
-        v = T()
-    }
         
-    open func setView(_ view: T) {
-        self.view = view
+    open func setView(_ view: T?) {
+        self.v = view
     }
     
+    open func customizeAppearance() { }
     open func setNavigationController() { }
     open func setListeners() { }
 }

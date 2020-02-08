@@ -9,23 +9,23 @@
 import UIKit
 
 public protocol BuilderProtocol: Component {
-    associatedtype T: ViewModel
-    associatedtype U: ViewController<T,V>
+    associatedtype VM: ViewModel
+    associatedtype VC: ViewController<VM,V>
     associatedtype V: View
-    func build() -> U
+    func build() -> VC
 }
 
 open class Builder<
-    T: ViewModel,
+    VM: ViewModel,
     V: View,
-    U: ViewController<T,V>>
+    VC: ViewController<VM,V>>
 : BuilderProtocol {
     
     public init() {
         setListeners()
     }
     
-    open func build() -> U {
+    open func build() -> VC {
         fatalError("Must override build function")
     }
     

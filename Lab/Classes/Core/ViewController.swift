@@ -9,25 +9,25 @@
 import UIKit
 
 public protocol ViewControllerProtocol: Component {
-    associatedtype U: ViewModel
-    associatedtype T: View
-    var v: T? { get }
-    var viewModel: U? { get set }
+    associatedtype VM: ViewModel
+    associatedtype V: View
+    var v: V? { get }
+    var viewModel: VM? { get set }
     func customizeAppearance()
-    func setView(_ view: T?)
+    func setView(_ view: V?)
     func setNavigationController()
 }
 
 open class ViewController<
-    U: ViewModel,
-    T: View
+    VM: ViewModel,
+    V: View
 >: UIViewController, ViewControllerProtocol {
-    public var v: T? {
-        return self.view as? T
+    public var v: V? {
+        return self.view as? V
     }
-    open var viewModel: U?
+    open var viewModel: VM?
     
-    public init(view: T?, viewModel: U?) {
+    public init(view: V?, viewModel: VM?) {
         super.init(nibName: nil, bundle: nil)
         self.viewModel = viewModel
         setView(view)
@@ -65,7 +65,7 @@ open class ViewController<
         setNavigationController()
     }
     
-    open func setView(_ view: T?) {
+    open func setView(_ view: V?) {
         self.view = view
     }
     

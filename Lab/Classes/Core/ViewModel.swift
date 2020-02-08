@@ -1,5 +1,5 @@
 //
-//  VIewModel.swift
+//  ViewModel.swift
 //  GoodWeather
 //
 //  Created by Yasin Akbaş on 7.02.2020.

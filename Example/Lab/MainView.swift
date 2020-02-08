@@ -15,11 +15,10 @@ class MainView: View {
     }
     
     private func setYellowView() {
-        let yellowView = UIView(frame: CGRect(x: 0, y: 0, width: 500, height: 200))
+        let yellowView = UIView()
         yellowView.backgroundColor = UIColor.yellow
+        
         addSubview(yellowView)
-        print("works 1")
-        print(frame)
         yellowView.translatesAutoresizingMaskIntoConstraints = false
         yellowView.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
         yellowView.rightAnchor.constraint(equalTo: rightAnchor).isActive = true

@@ -12,12 +12,5 @@ import Lab
 class MainViewController<
 T:ViewModel,
 V:MainView
->: ViewController<T, V> {
-    
-    override func customizeAppearance() {
-        super.customizeAppearance()
-       
-    }
-
-}
+>: ViewController<T, V> { }
 

@@ -8,77 +8,72 @@
 
 import UIKit
 
-protocol ViewControllerProtocol: Component {
+public protocol ViewControllerProtocol: Component {
     associatedtype U: ViewModel
     associatedtype T: View
-    var v: T { get set }
+    var v: T? { get set }
     var viewModel: U? { get set }
     func customizeAppearance()
     func setView(_ view: T)
     func setNavigationController()
 }
 
-class ViewController<U: ViewModel, T: View>: UIViewController, ViewControllerProtocol {
-    var v: T {
+open class ViewController<U: ViewModel, T: View>: UIViewController, ViewControllerProtocol {
+    public var v: T? {
         get {
-            if let _ = view as? T {
-                return self.view as! T
-            }
-            self.view = T()
-            return self.view as! T
+            return self.view as? T
         }
         set {
             self.view = newValue
         }
     }
-    var viewModel: U?
+    open var viewModel: U?
     
-    init(view: T?, viewModel: U?) {
+    public init(view: T?, viewModel: U?) {
         super.init(nibName: nil, bundle: nil)
-        v.backgroundColor = .white
         customInit()
     }
     
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+    override public init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         customInit()
     }
     
-    init() {
+    public init() {
         super.init(nibName: nil, bundle: nil)
         customInit()
     }
     
-    required init?(coder: NSCoder) {
+    required public init?(coder: NSCoder) {
         fatalError("init?(coder:) has not been implemented")
     }
     
     private func customInit() { }
     
-    override func loadView() {
+    override open func loadView() {
         super.loadView()
         customizeAppearance()
     }
     
-    override func viewDidLoad() {
+    override open func viewDidLoad() {
         super.viewDidLoad()
         setListeners()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    override open func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setNavigationController()
     }
     
-    func customizeAppearance() {
-        v.backgroundColor = .white
+    open func customizeAppearance() {
+        v = T()
     }
         
-    func setView(_ view: T) {
+    open func setView(_ view: T) {
         self.view = view
     }
     
-    func setNavigationController() { }
-    func setListeners() { }
+    open func setNavigationController() { }
+    open func setListeners() { }
 }
 

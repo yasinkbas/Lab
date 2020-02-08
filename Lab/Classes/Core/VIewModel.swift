@@ -8,13 +8,13 @@
 
 import Foundation
 
-protocol ViewModelProtocol: Component { }
+public protocol ViewModelProtocol: Component { }
 
-class ViewModel: ViewModelProtocol {
+open class ViewModel: ViewModelProtocol {
     
-    init() {
+    public init() {
         setListeners()
     }
     
-    func setListeners() { }
+    open func setListeners() { }
 }

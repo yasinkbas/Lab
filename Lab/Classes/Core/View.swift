@@ -8,24 +8,24 @@
 
 import UIKit
 
-protocol ViewProtocol: Component {
+public protocol ViewProtocol: Component {
     func configureAppearance()
     func setViews()
 }
 
-class View: UIView, ViewProtocol {
-    override init(frame: CGRect) {
+open class View: UIView, ViewProtocol {
+    override public init(frame: CGRect) {
         super.init(frame: frame)
         configureAppearance()
         setViews()
         setListeners()
     }
     
-    required init?(coder: NSCoder) {
+    required public init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configureAppearance() { }
-    func setViews() { }
-    func setListeners() { }
+    open func configureAppearance() { }
+    open func setViews() { }
+    open func setListeners() { }
 }

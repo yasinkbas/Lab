@@ -8,13 +8,13 @@
 
 import Foundation
 
-protocol Component: class {
+public protocol Component: class {
     func setListeners()
     func setDelegate(_ delegate: inout AnyObject)
 }
 
 extension Component {
-    func setDelegate(_ delegate: inout AnyObject) {
+    public func setDelegate(_ delegate: inout AnyObject) {
         delegate = self
     }
 }

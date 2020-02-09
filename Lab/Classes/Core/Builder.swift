@@ -18,8 +18,8 @@ public protocol BuilderProtocol: Component {
 open class Builder<
     VM: ViewModel,
     V: View,
-    VC: ViewController<VM,V>>
-: BuilderProtocol {
+    VC: ViewController<VM,V>
+>: BuilderProtocol {
     
     public init() {
         setListeners()

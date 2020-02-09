@@ -314,10 +314,42 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C2B86DF023F050E30085F677 /* Constraints */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constraints;
+			sourceTree = "<group>";
+		};
+		C2B86DF123F050EB0085F677 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		C2B86DF223F050F50085F677 /* CoreService */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CoreService;
+			sourceTree = "<group>";
+		};
+		C2B86DF323F051050085F677 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		C2F82C4023EF022500890BE6 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
 				C2F82C4723EF026200890BE6 /* Core */,
+				C2B86DF123F050EB0085F677 /* Coordinator */,
+				C2B86DF223F050F50085F677 /* CoreService */,
+				C2B86DF023F050E30085F677 /* Constraints */,
+				C2B86DF323F051050085F677 /* Extensions */,
 			);
 			name = Classes;
 			path = Lab/Classes;

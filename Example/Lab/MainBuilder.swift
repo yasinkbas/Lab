@@ -10,12 +10,12 @@ import Lab
 import UIKit
 
 class MainBuilder<
-    T: ViewModel,
+    VM: ViewModel,
     V: MainView,
-    U: MainViewController<T,V>
->: Builder<T,V,U> {
+    VC: MainViewController<VM,V>
+>: Builder<VM,V,VC> {
     
-    override func build() -> U {
-        return MainViewController(view: MainView(), viewModel: nil) as! U
+    override func build() -> VC {
+        return MainViewController(view: MainView(), viewModel: nil) as! VC 
     }
 }

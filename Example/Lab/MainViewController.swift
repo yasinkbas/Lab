@@ -10,6 +10,6 @@ import UIKit
 import Lab
 
 class MainViewController<
-    T:ViewModel,
+    VM:ViewModel,
     V:MainView
->: ViewController<T, V> { }
+>: ViewController<VM, V> { }

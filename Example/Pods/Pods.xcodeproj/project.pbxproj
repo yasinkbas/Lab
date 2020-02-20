@@ -28,6 +28,7 @@
 		B25D795BDC4F426BC01EFC911F368B81 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BD4ED544B638D07C7D755AF1C27116A /* Foundation.framework */; };
 		B6F7CA5C19244F2CED9C200714D7585E /* Pods-Lab_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 34DAF26831EA3F7E1DB35A4FDA4F197B /* Pods-Lab_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B74CD6E6EBEA0B642776BCB37850415D /* UIImage+Snapshot.h in Headers */ = {isa = PBXBuildFile; fileRef = EA718A72E676291836EBB46B85242155 /* UIImage+Snapshot.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C2E28B2223FF170C00801E6F /* AsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E28B2023FF16DF00801E6F /* AsyncOperation.swift */; };
 		C2F82C4D23EF026200890BE6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F82C4823EF026200890BE6 /* ViewController.swift */; };
 		C2F82C4E23EF026200890BE6 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F82C4923EF026200890BE6 /* View.swift */; };
 		C2F82C4F23EF026200890BE6 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F82C4A23EF026200890BE6 /* ViewModel.swift */; };
@@ -107,6 +108,7 @@
 		A25844C26701FA4BCAEF64150B56777F /* UIImage+Compare.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Compare.h"; path = "FBSnapshotTestCase/Categories/UIImage+Compare.h"; sourceTree = "<group>"; };
 		AA172EA1A198EEFBE0794EACF7993C02 /* UIImage+Snapshot.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Snapshot.m"; path = "FBSnapshotTestCase/Categories/UIImage+Snapshot.m"; sourceTree = "<group>"; };
 		AD0B81AC7DF4855803A0FA70985F8A99 /* FBSnapshotTestCasePlatform.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestCasePlatform.m; path = FBSnapshotTestCase/FBSnapshotTestCasePlatform.m; sourceTree = "<group>"; };
+		C2E28B2023FF16DF00801E6F /* AsyncOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncOperation.swift; sourceTree = "<group>"; };
 		C2F82C4823EF026200890BE6 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C2F82C4923EF026200890BE6 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		C2F82C4A23EF026200890BE6 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
@@ -342,9 +344,18 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		C2E28B1F23FF16C500801E6F /* Concurrent */ = {
+			isa = PBXGroup;
+			children = (
+				C2E28B2023FF16DF00801E6F /* AsyncOperation.swift */,
+			);
+			path = Concurrent;
+			sourceTree = "<group>";
+		};
 		C2F82C4023EF022500890BE6 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				C2E28B1F23FF16C500801E6F /* Concurrent */,
 				C2F82C4723EF026200890BE6 /* Core */,
 				C2B86DF123F050EB0085F677 /* Coordinator */,
 				C2B86DF223F050F50085F677 /* CoreService */,
@@ -638,6 +649,7 @@
 				C2F82C4F23EF026200890BE6 /* ViewModel.swift in Sources */,
 				C2F82C4E23EF026200890BE6 /* View.swift in Sources */,
 				C2F82C5023EF026200890BE6 /* Builder.swift in Sources */,
+				C2E28B2223FF170C00801E6F /* AsyncOperation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

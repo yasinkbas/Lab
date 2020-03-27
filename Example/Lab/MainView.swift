@@ -8,7 +8,7 @@
 
 import Lab
 
-class MainView: View {
+class MainView: View<MainViewLayout> {
     
     override func setViews() {
         setYellowView()
@@ -23,10 +23,20 @@ class MainView: View {
         yellowView.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
         yellowView.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
         yellowView.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        yellowView.heightAnchor.constraint(equalToConstant: 80).isActive = true
+        yellowView.heightAnchor.constraint(equalToConstant: layout.yellowView_height).isActive = true
     }
     
     override func configureAppearance() {
         backgroundColor = .gray
     }
+}
+
+struct MainViewLayout: LayoutPolicy {
+    var view: UIView
+    
+    init(_ view: UIView) {
+        self.view = view
+    }
+    
+    var yellowView_height: CGFloat = 80
 }

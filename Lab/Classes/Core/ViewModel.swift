@@ -8,7 +8,7 @@
 
 import Foundation
 
-public protocol ViewModelProtocol: Component { }
+public protocol ViewModelProtocol: ComponentPolicy { }
 
 open class ViewModel: ViewModelProtocol {
     

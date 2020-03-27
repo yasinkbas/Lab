@@ -8,19 +8,23 @@
 
 import UIKit
 
-public protocol ViewControllerProtocol: Component {
+public protocol ViewControllerProtocol: ComponentPolicy {
+    associatedtype V: View<Layout>
     associatedtype VM: ViewModel
-    associatedtype V: View
+    associatedtype Layout: LayoutPolicy
+    
     var v: V? { get }
     var viewModel: VM? { get set }
+    
     func customizeAppearance()
     func setView(_ view: V?)
     func setNavigationController()
 }
 
 open class ViewController<
+    Layout: LayoutPolicy,
     VM: ViewModel,
-    V: View
+    V: View<Layout>
 >: UIViewController, ViewControllerProtocol {
     public var v: V? {
         return self.view as? V

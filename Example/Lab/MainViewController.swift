@@ -12,4 +12,4 @@ import Lab
 class MainViewController<
     VM:ViewModel,
     V:MainView
->: ViewController<VM, V> { }
+>: ViewController<MainViewLayout, VM, V> { }

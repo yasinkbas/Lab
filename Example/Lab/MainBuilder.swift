@@ -13,7 +13,7 @@ class MainBuilder<
     VM: ViewModel,
     V: MainView,
     VC: MainViewController<VM,V>
->: Builder<VM,V,VC> {
+>: Builder<MainViewLayout,VM,V,VC> {
     
     override func build() -> VC {
         return MainViewController(view: MainView(), viewModel: nil) as! VC 

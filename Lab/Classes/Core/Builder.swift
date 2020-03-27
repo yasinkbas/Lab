@@ -8,17 +8,19 @@
 
 import UIKit
 
-public protocol BuilderProtocol: Component {
+public protocol BuilderProtocol: ComponentPolicy {
+    associatedtype Layout: LayoutPolicy
     associatedtype VM: ViewModel
-    associatedtype VC: ViewController<VM,V>
-    associatedtype V: View
+    associatedtype VC: ViewController<Layout,VM,V>
+    associatedtype V: View<Layout>
     func build() -> VC
 }
 
 open class Builder<
+    Layout: LayoutPolicy,
     VM: ViewModel,
-    V: View,
-    VC: ViewController<VM,V>
+    V: View<Layout>,
+    VC: ViewController<Layout,VM,V>
 >: BuilderProtocol {
     
     public init() {

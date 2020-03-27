@@ -28,12 +28,13 @@
 		B25D795BDC4F426BC01EFC911F368B81 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BD4ED544B638D07C7D755AF1C27116A /* Foundation.framework */; };
 		B6F7CA5C19244F2CED9C200714D7585E /* Pods-Lab_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 34DAF26831EA3F7E1DB35A4FDA4F197B /* Pods-Lab_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B74CD6E6EBEA0B642776BCB37850415D /* UIImage+Snapshot.h in Headers */ = {isa = PBXBuildFile; fileRef = EA718A72E676291836EBB46B85242155 /* UIImage+Snapshot.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		C2E28B2223FF170C00801E6F /* AsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E28B2023FF16DF00801E6F /* AsyncOperation.swift */; };
+		C22CDF4D242E9DE700244427 /* ListenedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22CDF4C242E9DE700244427 /* ListenedView.swift */; };
+		C22CDF4F242E9EA300244427 /* LayoutPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22CDF4E242E9EA300244427 /* LayoutPolicy.swift */; };
 		C2F82C4D23EF026200890BE6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F82C4823EF026200890BE6 /* ViewController.swift */; };
 		C2F82C4E23EF026200890BE6 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F82C4923EF026200890BE6 /* View.swift */; };
 		C2F82C4F23EF026200890BE6 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F82C4A23EF026200890BE6 /* ViewModel.swift */; };
 		C2F82C5023EF026200890BE6 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F82C4B23EF026200890BE6 /* Builder.swift */; };
-		C2F82C5123EF026200890BE6 /* Component.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F82C4C23EF026200890BE6 /* Component.swift */; };
+		C2F82C5123EF026200890BE6 /* ComponentPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F82C4C23EF026200890BE6 /* ComponentPolicy.swift */; };
 		C49D52712466511E332C952834C81FE1 /* FBSnapshotTestCasePlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = D3067EAFD5B0A06885968D137840DB70 /* FBSnapshotTestCasePlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C5F6A50DA2AA9DA89956D9ECC48B8B4F /* Pods-Lab_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A1D6F1D5A931CAA7776E0D891E06AC /* Pods-Lab_Tests-dummy.m */; };
 		D04AAC8B22E4A4DC4F39891C4E52F251 /* UIImage+Diff.h in Headers */ = {isa = PBXBuildFile; fileRef = E354F8FD537351F26F7949B4EBFA5101 /* UIImage+Diff.h */; settings = {ATTRIBUTES = (Private, ); }; };
@@ -108,12 +109,13 @@
 		A25844C26701FA4BCAEF64150B56777F /* UIImage+Compare.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Compare.h"; path = "FBSnapshotTestCase/Categories/UIImage+Compare.h"; sourceTree = "<group>"; };
 		AA172EA1A198EEFBE0794EACF7993C02 /* UIImage+Snapshot.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Snapshot.m"; path = "FBSnapshotTestCase/Categories/UIImage+Snapshot.m"; sourceTree = "<group>"; };
 		AD0B81AC7DF4855803A0FA70985F8A99 /* FBSnapshotTestCasePlatform.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestCasePlatform.m; path = FBSnapshotTestCase/FBSnapshotTestCasePlatform.m; sourceTree = "<group>"; };
-		C2E28B2023FF16DF00801E6F /* AsyncOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncOperation.swift; sourceTree = "<group>"; };
+		C22CDF4C242E9DE700244427 /* ListenedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListenedView.swift; sourceTree = "<group>"; };
+		C22CDF4E242E9EA300244427 /* LayoutPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutPolicy.swift; sourceTree = "<group>"; };
 		C2F82C4823EF026200890BE6 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C2F82C4923EF026200890BE6 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		C2F82C4A23EF026200890BE6 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		C2F82C4B23EF026200890BE6 /* Builder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
-		C2F82C4C23EF026200890BE6 /* Component.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Component.swift; sourceTree = "<group>"; };
+		C2F82C4C23EF026200890BE6 /* ComponentPolicy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComponentPolicy.swift; sourceTree = "<group>"; };
 		C354472918DEF047840B2FC6329136AF /* Pods_Lab_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lab_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB67D033E6B5CA5F2E110940573C207D /* Lab-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Lab-dummy.m"; sourceTree = "<group>"; };
 		CDD185A41AF12BCDF457E8297D1DD7F4 /* Pods-Lab_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Lab_Example-dummy.m"; sourceTree = "<group>"; };
@@ -316,6 +318,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C22CDF50242EA07900244427 /* Policy */ = {
+			isa = PBXGroup;
+			children = (
+				C2F82C4C23EF026200890BE6 /* ComponentPolicy.swift */,
+				C22CDF4E242E9EA300244427 /* LayoutPolicy.swift */,
+			);
+			path = Policy;
+			sourceTree = "<group>";
+		};
 		C2B86DF023F050E30085F677 /* Constraints */ = {
 			isa = PBXGroup;
 			children = (
@@ -344,18 +355,9 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		C2E28B1F23FF16C500801E6F /* Concurrent */ = {
-			isa = PBXGroup;
-			children = (
-				C2E28B2023FF16DF00801E6F /* AsyncOperation.swift */,
-			);
-			path = Concurrent;
-			sourceTree = "<group>";
-		};
 		C2F82C4023EF022500890BE6 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				C2E28B1F23FF16C500801E6F /* Concurrent */,
 				C2F82C4723EF026200890BE6 /* Core */,
 				C2B86DF123F050EB0085F677 /* Coordinator */,
 				C2B86DF223F050F50085F677 /* CoreService */,
@@ -369,11 +371,12 @@
 		C2F82C4723EF026200890BE6 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				C22CDF50242EA07900244427 /* Policy */,
 				C2F82C4823EF026200890BE6 /* ViewController.swift */,
 				C2F82C4923EF026200890BE6 /* View.swift */,
+				C22CDF4C242E9DE700244427 /* ListenedView.swift */,
 				C2F82C4A23EF026200890BE6 /* ViewModel.swift */,
 				C2F82C4B23EF026200890BE6 /* Builder.swift */,
-				C2F82C4C23EF026200890BE6 /* Component.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -644,12 +647,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2F82C4D23EF026200890BE6 /* ViewController.swift in Sources */,
-				C2F82C5123EF026200890BE6 /* Component.swift in Sources */,
+				C2F82C5123EF026200890BE6 /* ComponentPolicy.swift in Sources */,
 				36A431648B20248D27E837BD5CE53B85 /* Lab-dummy.m in Sources */,
+				C22CDF4D242E9DE700244427 /* ListenedView.swift in Sources */,
 				C2F82C4F23EF026200890BE6 /* ViewModel.swift in Sources */,
+				C22CDF4F242E9EA300244427 /* LayoutPolicy.swift in Sources */,
 				C2F82C4E23EF026200890BE6 /* View.swift in Sources */,
 				C2F82C5023EF026200890BE6 /* Builder.swift in Sources */,
-				C2E28B2223FF170C00801E6F /* AsyncOperation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -693,7 +697,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Lab/Lab-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Lab/Lab-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Lab/Lab.modulemap";
 				PRODUCT_MODULE_NAME = Lab;
@@ -1014,7 +1018,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Lab/Lab-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Lab/Lab-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Lab/Lab.modulemap";
 				PRODUCT_MODULE_NAME = Lab;

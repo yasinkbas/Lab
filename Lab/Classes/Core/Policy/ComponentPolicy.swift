@@ -1,5 +1,5 @@
 //
-//  Component.swift
+//  ComponentPolicy.swift
 //  GoodWeather
 //
 //  Created by Yasin Akbaş on 7.02.2020.
@@ -8,12 +8,12 @@
 
 import Foundation
 
-public protocol Component: class {
+public protocol ComponentPolicy: class {
     func setListeners()
     func setDelegate(_ delegate: inout AnyObject)
 }
 
-extension Component {
+extension ComponentPolicy {
     public func setDelegate(_ delegate: inout AnyObject) {
         delegate = self
     }

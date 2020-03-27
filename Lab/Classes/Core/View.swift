@@ -8,14 +8,24 @@
 
 import UIKit
 
-public protocol ViewProtocol: Component {
+public protocol ViewProtocol: ComponentPolicy {
+    associatedtype Layout = LayoutPolicy
+    var layout: Layout { get }
+    
+    func preConfigureAppearance()
     func configureAppearance()
     func setViews()
 }
 
-open class View: UIView, ViewProtocol {
+open class View<Layout: LayoutPolicy>: UIView, ViewProtocol {
+    public var layout: Layout {
+        return Layout(self)
+    }
+    
+    
     override public init(frame: CGRect) {
         super.init(frame: frame)
+        preConfigureAppearance()
         configureAppearance()
         setViews()
         setListeners()
@@ -23,6 +33,10 @@ open class View: UIView, ViewProtocol {
     
     required public init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    open func preConfigureAppearance() {
+        backgroundColor = .white
     }
     
     open func configureAppearance() { }

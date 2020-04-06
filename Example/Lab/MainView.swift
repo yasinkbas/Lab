@@ -10,14 +10,13 @@ import Lab
 
 class MainView: View<MainViewLayout> {
     
+    let yellowView = UIView() --> [.yellowView, .cornerable(radius: 0)]
+    
     override func setViews() {
-        setYellowView()
+        setupYellowView()
     }
     
-    private func setYellowView() {
-        let yellowView = UIView()
-        yellowView.backgroundColor = UIColor.yellow
-        
+    private func setupYellowView() {        
         addSubview(yellowView)
         yellowView.translatesAutoresizingMaskIntoConstraints = false
         yellowView.leftAnchor.constraint(equalTo: leftAnchor).isActive = true

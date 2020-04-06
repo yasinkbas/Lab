@@ -14,6 +14,8 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		B8C1B74D26AA60C661B1A3FD /* Pods_Lab_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55F9AE9F3C88D03FDB2B9A6A /* Pods_Lab_Tests.framework */; };
+		C24822FA243BCF4900F6AB29 /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24822F9243BCF4900F6AB29 /* Styles.swift */; };
+		C24822FC243BD37900F6AB29 /* StyleConveniences.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24822FB243BD37900F6AB29 /* StyleConveniences.swift */; };
 		C2F82C5323EF068200890BE6 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F82C5223EF068200890BE6 /* MainView.swift */; };
 		C2F82C5523EF077600890BE6 /* MainBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F82C5423EF077600890BE6 /* MainBuilder.swift */; };
 /* End PBXBuildFile section */
@@ -45,6 +47,8 @@
 		6AE6CFB849F170CD4746F43E /* Lab.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Lab.podspec; path = ../Lab.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		6D7BFE54FBADFB4209F855EB /* Pods-Lab_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lab_Example.release.xcconfig"; path = "Target Support Files/Pods-Lab_Example/Pods-Lab_Example.release.xcconfig"; sourceTree = "<group>"; };
 		C2312E78B335BFA2CD36CFEA /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		C24822F9243BCF4900F6AB29 /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
+		C24822FB243BD37900F6AB29 /* StyleConveniences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleConveniences.swift; sourceTree = "<group>"; };
 		C2F82C5223EF068200890BE6 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		C2F82C5423EF077600890BE6 /* MainBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBuilder.swift; sourceTree = "<group>"; };
 		CDB50DE9D7AF78F271DC8540 /* Pods-Lab_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lab_Tests.release.xcconfig"; path = "Target Support Files/Pods-Lab_Tests/Pods-Lab_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -99,6 +103,8 @@
 				C2F82C5623EF077900890BE6 /* Screens */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
+				C24822F9243BCF4900F6AB29 /* Styles.swift */,
+				C24822FB243BD37900F6AB29 /* StyleConveniences.swift */,
 			);
 			name = "Example for Lab";
 			path = Lab;
@@ -377,9 +383,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2F82C5523EF077600890BE6 /* MainBuilder.swift in Sources */,
+				C24822FC243BD37900F6AB29 /* StyleConveniences.swift in Sources */,
 				607FACD81AFB9204008FA782 /* MainViewController.swift in Sources */,
 				C2F82C5323EF068200890BE6 /* MainView.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				C24822FA243BCF4900F6AB29 /* Styles.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

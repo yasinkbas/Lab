@@ -1,6 +1,6 @@
 import UIKit
 
-protocol ViewAppearanceModifier {
+public protocol ViewAppearanceModifier {
     func configureAppearance()
     func setupListeners()
     func setupLayout()
@@ -11,20 +11,20 @@ extension ViewAppearanceModifier {
     func setupLayout()    { }
 }
 
-class SceneView: UIView, ViewAppearanceModifier {
+open class SceneView: UIView, ViewAppearanceModifier {
 
-    override init(frame: CGRect) {
+    override public init(frame: CGRect) {
         super.init(frame: frame)
         configureAppearance()
         setupLayout()
         setupListeners()
     }
 
-    required init?(coder: NSCoder) {
+    required public init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setupLayout()          { }
-    func setupListeners()       { }
-    func configureAppearance()  { }
+    open func setupLayout()          { }
+    open func setupListeners()       { }
+    open func configureAppearance()  { }
 }

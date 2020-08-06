@@ -1,5 +1,5 @@
 import UIKit
 
-protocol SceneBuildable { }
+public protocol SceneBuildable { }
 
 extension UIViewController: SceneBuildable { }

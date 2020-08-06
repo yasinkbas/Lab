@@ -24,6 +24,8 @@
 		C29EA5E424DC02BB00724BBD /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29EA5DB24DC02BB00724BBD /* View.swift */; };
 		C29EA5E724DC02C500724BBD /* ViewMixins.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29EA5E624DC02C500724BBD /* ViewMixins.swift */; };
 		C29EA5EA24DC049800724BBD /* Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29EA5E924DC049800724BBD /* Transition.swift */; };
+		C29EA60D24DC139100724BBD /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29EA60C24DC139100724BBD /* Request.swift */; };
+		C29EA61124DC13CE00724BBD /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29EA61024DC13CE00724BBD /* Response.swift */; };
 		C5F6A50DA2AA9DA89956D9ECC48B8B4F /* Pods-Lab_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A1D6F1D5A931CAA7776E0D891E06AC /* Pods-Lab_Tests-dummy.m */; };
 		DEE8886312260B187CB5A4C8FD6FEA97 /* Pods-Lab_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CDD185A41AF12BCDF457E8297D1DD7F4 /* Pods-Lab_Example-dummy.m */; };
 		DF26C2D8A8E41A5AEBCFC5DDFB960B4A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BD4ED544B638D07C7D755AF1C27116A /* Foundation.framework */; };
@@ -95,6 +97,8 @@
 		C29EA5DB24DC02BB00724BBD /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		C29EA5E624DC02C500724BBD /* ViewMixins.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewMixins.swift; sourceTree = "<group>"; };
 		C29EA5E924DC049800724BBD /* Transition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transition.swift; sourceTree = "<group>"; };
+		C29EA60C24DC139100724BBD /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		C29EA61024DC13CE00724BBD /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		C354472918DEF047840B2FC6329136AF /* Pods_Lab_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lab_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB67D033E6B5CA5F2E110940573C207D /* Lab-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Lab-dummy.m"; sourceTree = "<group>"; };
 		CDD185A41AF12BCDF457E8297D1DD7F4 /* Pods-Lab_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Lab_Example-dummy.m"; sourceTree = "<group>"; };
@@ -288,7 +292,7 @@
 		C29EA5D024DC02AF00724BBD /* Scene */ = {
 			isa = PBXGroup;
 			children = (
-				C29EA5D524DC02BB00724BBD /* Common */,
+				C29EA5D524DC02BB00724BBD /* Commons */,
 				C29EA5D124DC02BB00724BBD /* Builder.swift */,
 				C29EA5D324DC02BB00724BBD /* Interactor.swift */,
 				C29EA5DA24DC02BB00724BBD /* Presenter.swift */,
@@ -299,12 +303,12 @@
 			path = Scene;
 			sourceTree = "<group>";
 		};
-		C29EA5D524DC02BB00724BBD /* Common */ = {
+		C29EA5D524DC02BB00724BBD /* Commons */ = {
 			isa = PBXGroup;
 			children = (
 				C29EA5D624DC02BB00724BBD /* Protocols */,
 			);
-			path = Common;
+			path = Commons;
 			sourceTree = "<group>";
 		};
 		C29EA5D624DC02BB00724BBD /* Protocols */ = {
@@ -333,9 +337,35 @@
 			path = Transition;
 			sourceTree = "<group>";
 		};
+		C29EA60B24DC138000724BBD /* Interaction */ = {
+			isa = PBXGroup;
+			children = (
+				C29EA60F24DC139A00724BBD /* Response */,
+				C29EA60E24DC139500724BBD /* Request */,
+			);
+			path = Interaction;
+			sourceTree = "<group>";
+		};
+		C29EA60E24DC139500724BBD /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				C29EA60C24DC139100724BBD /* Request.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		C29EA60F24DC139A00724BBD /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				C29EA61024DC13CE00724BBD /* Response.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
 		C2F82C4023EF022500890BE6 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				C29EA60B24DC138000724BBD /* Interaction */,
 				C29EA5E824DC048F00724BBD /* Transition */,
 				C29EA5E524DC02C500724BBD /* Mixins */,
 				C29EA5D024DC02AF00724BBD /* Scene */,
@@ -559,8 +589,10 @@
 				C29EA5E324DC02BB00724BBD /* Presenter.swift in Sources */,
 				C29EA5DF24DC02BB00724BBD /* ViewController.swift in Sources */,
 				C29EA5E424DC02BB00724BBD /* View.swift in Sources */,
+				C29EA60D24DC139100724BBD /* Request.swift in Sources */,
 				C29EA5E124DC02BB00724BBD /* Routable.swift in Sources */,
 				36A431648B20248D27E837BD5CE53B85 /* Lab-dummy.m in Sources */,
+				C29EA61124DC13CE00724BBD /* Response.swift in Sources */,
 				C29EA5E024DC02BB00724BBD /* ViewRequest.swift in Sources */,
 				C29EA5EA24DC049800724BBD /* Transition.swift in Sources */,
 				C29EA5DD24DC02BB00724BBD /* Router.swift in Sources */,

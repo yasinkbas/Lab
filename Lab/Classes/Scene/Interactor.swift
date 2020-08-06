@@ -1,16 +1,16 @@
 import UIKit
 
-class SceneInteractor<
+open class SceneInteractor<
     View: SceneView,
     Router: SceneRouter,
     ViewController: SceneViewController<View, Router>,
     Presenter: ScenePresenter<View, Router, ViewController>
 > {
-    var presenter: Presenter?
+    public var presenter: Presenter?
     
-    init() {
+    public init() {
         setupWorkers()
     }
     
-    func setupWorkers() { }
+    open func setupWorkers() { }
 }

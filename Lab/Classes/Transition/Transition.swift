@@ -1,21 +1,21 @@
 import UIKit
 
-protocol TransitionStyle {
+public protocol TransitionStyle {
     func start(from firstViewController: UIViewController?, to secondViewController: UIViewController)
 }
 
-protocol Transition {
+public protocol Transition {
     associatedtype PresentationStyle: TransitionStyle
-    
 }
 
-class SimpleTransition: Transition {
-    enum PresentationStyle: TransitionStyle {
+
+public final class SimpleTransition: Transition {
+    public enum PresentationStyle: TransitionStyle {
         case show
         case toRight
         case toLeft
         
-        func start(from firstViewController: UIViewController?, to secondViewController: UIViewController) {
+        public func start(from firstViewController: UIViewController?, to secondViewController: UIViewController) {
             switch self {
             case .show:
                 firstViewController?.present(secondViewController, animated: true, completion: nil)

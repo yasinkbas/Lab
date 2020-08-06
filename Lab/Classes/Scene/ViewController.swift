@@ -1,36 +1,36 @@
 import UIKit
 
-class SceneViewController<
+open class SceneViewController<
     View: SceneView,
     Router: SceneRouter
 >: UIViewController {
-    var v: View? { view as? View }
+    public var v: View? { view as? View }
     
-    var router: Router?
+    public var router: Router?
     
     // MARK: - Initialize
     
-    init(view: View) {
+    public init(view: View) {
         super.init(nibName: nil, bundle: nil)
         self.view = view
     }
     
-    required init?(coder: NSCoder) {
+    required public init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
     
-    func configureAppearance() { }
-    func setupListeners() { }
+    open func configureAppearance() { }
+    open func setupListeners() { }
     
-    func setup() {
+    open func setup() {
         configureAppearance()
         setupListeners()
     }
     
     // MARK: - Overrides
     
-    override func present(
+    open override func present(
         _ viewControllerToPresent: UIViewController,
         animated flag: Bool,
         completion: (() -> Void)? = nil
@@ -41,7 +41,7 @@ class SceneViewController<
     
     // MARK:- Hiding Keyboard
     
-    var isHideKeyboardWhenTapped: Bool = false {
+    public var isHideKeyboardWhenTapped: Bool = false {
         didSet {
             isHideKeyboardWhenTapped ? hideKeyboardWhenTapped() : nil
         }
@@ -55,23 +55,23 @@ class SceneViewController<
     }
 
     @objc
-    func tappedOnView() {
+    private func tappedOnView() {
         v?.endEditing(true)
     }
 }
 
 // MARK: - Alert
 extension SceneViewController {
-    enum AlertActionType {
-        typealias Handler = ((UIAlertAction) -> ())
-        case ok(Handler? = nil)
-        case cancel(Handler? = nil)
+    public enum AlertActionType {
+        public typealias SceneHandler = ((UIAlertAction) -> ())
+        case ok(SceneHandler? = nil)
+        case cancel(SceneHandler? = nil)
         
-        var handler: Handler?                   { value.handler }
-        var title: String                       { value.title }
-        var actionStyle: UIAlertAction.Style    { value.style }
+        var handler: SceneHandler?                  { value.handler }
+        var title: String                           { value.title }
+        var actionStyle: UIAlertAction.Style        { value.style }
         
-        private var value: (title: String, handler: Handler?, style: UIAlertAction.Style) {
+        private var value: (title: String, handler: SceneHandler?, style: UIAlertAction.Style) {
             switch self {
             case let .ok(handler): return ("Ok", handler, .default)
             case let .cancel(handler): return ("Cancel", handler, .cancel)
@@ -80,7 +80,7 @@ extension SceneViewController {
     }
     
     
-    func alert(title: String, message: String, actions: [AlertActionType]) {
+    public func alert(title: String, message: String, actions: [AlertActionType]) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         actions.forEach {
             alertController.addAction(UIAlertAction(title: $0.title, style: $0.actionStyle, handler: $0.handler))

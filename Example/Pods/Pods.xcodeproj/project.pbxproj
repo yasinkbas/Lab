@@ -288,7 +288,7 @@
 		C29EA5D024DC02AF00724BBD /* Scene */ = {
 			isa = PBXGroup;
 			children = (
-				C29EA5D524DC02BB00724BBD /* Common */,
+				C29EA5D524DC02BB00724BBD /* Commons */,
 				C29EA5D124DC02BB00724BBD /* Builder.swift */,
 				C29EA5D324DC02BB00724BBD /* Interactor.swift */,
 				C29EA5DA24DC02BB00724BBD /* Presenter.swift */,
@@ -299,12 +299,12 @@
 			path = Scene;
 			sourceTree = "<group>";
 		};
-		C29EA5D524DC02BB00724BBD /* Common */ = {
+		C29EA5D524DC02BB00724BBD /* Commons */ = {
 			isa = PBXGroup;
 			children = (
 				C29EA5D624DC02BB00724BBD /* Protocols */,
 			);
-			path = Common;
+			path = Commons;
 			sourceTree = "<group>";
 		};
 		C29EA5D624DC02BB00724BBD /* Protocols */ = {

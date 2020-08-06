@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name             = 'Lab'
-  s.version          = '0.1.1'
-  s.summary          = 'Simple Generic Base Structure.'
+  s.version          = '0.1.2'
+  s.summary          = 'Simple Generic Base Scene Structure.'
 
   s.homepage         = 'https://github.com/yasinkbas/Lab'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }

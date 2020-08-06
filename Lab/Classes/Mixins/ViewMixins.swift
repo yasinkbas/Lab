@@ -1,15 +1,15 @@
 import UIKit
 
-protocol TableViewMixin: UIView {
+public protocol TableViewMixin: UIView {
     associatedtype TableView: UITableView
    
-    var tableView: TableView { get set }
-    var cellHeight: CGFloat { get }
+    var tableView: TableView    { get set }
+    var cellHeight: CGFloat     { get }
 }
 
 extension SceneViewController where View: TableViewMixin {
     @nonobjc
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return v!.cellHeight
     }
 }

@@ -1,6 +1,6 @@
 import UIKit
 
-protocol SceneBuilder: SceneRoutable {
+public protocol SceneBuilder: SceneRoutable {
     associatedtype Buildable: SceneBuildable
     associatedtype Request: SceneViewRequest
     

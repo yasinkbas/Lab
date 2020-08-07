@@ -6,7 +6,7 @@ public protocol ViewAppearanceModifier {
     func setupLayout()
 }
 
-extension ViewAppearanceModifier {
+public extension ViewAppearanceModifier {
     func setupListeners() { }
     func setupLayout()    { }
 }
